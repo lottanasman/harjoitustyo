@@ -75,7 +75,7 @@
   }
 
   input {
-    width: 5%;
+    width: 10%;
   }
 
   div {
