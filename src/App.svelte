@@ -2,6 +2,7 @@
   import TarotCard from './lib/TarotCard.svelte';
 
   let numCards = 1;
+  let showCardModal = false;
 </script>
 
 <main>
