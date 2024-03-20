@@ -8,6 +8,7 @@
   const dispatch = createEventDispatcher();
   let tarotCards = [];
   let currentCardIndex = 0;
+  let selectedCardName = '';
 
   async function fetchCards() {
     try {
@@ -20,6 +21,22 @@
 
   function sulje() {
     dispatch('sulje');
+  }
+
+  function nextCard() {
+    currentCardIndex = (currentCardIndex + 1) % tarotCards.length;
+  }
+
+  function prevCard() {
+    currentCardIndex =
+      (currentCardIndex - 1 + tarotCards.length) % tarotCards.length;
+  }
+
+  //Tämä funktio TEKOÄLYÄ!
+  function goToCard() {
+    currentCardIndex = tarotCards.findIndex(
+      (card) => card.name === selectedCardName
+    );
   }
 </script>
 
@@ -50,6 +67,23 @@
         </p>
       </div>
     </div>
+
+    <div class="nav-buttons">
+      <button on:click={prevCard} disabled={currentCardIndex === 0}
+        >Previous</button
+      >
+      <select bind:value={selectedCardName} on:change={goToCard}>
+        <option value="">Select a card</option>
+        {#each tarotCards as card}
+          <option value={card.name}>{card.name}</option>
+        {/each}
+      </select>
+      <button
+        on:click={nextCard}
+        disabled={currentCardIndex === tarotCards.length - 1}>Next</button
+      >
+    </div>
+    <br />
     <button slot="footer" on:click={sulje}>Close</button>
   </Modal>
 {/if}
