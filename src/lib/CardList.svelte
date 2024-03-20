@@ -38,6 +38,14 @@
       (card) => card.name === selectedCardName
     );
   }
+
+  $: {
+    if (selectedCardName !== '') {
+      currentCardIndex = tarotCards.findIndex(
+        (card) => card.name === selectedCardName
+      );
+    }
+  }
 </script>
 
 <button on:click={fetchCards}>Browse all cards</button>
@@ -100,5 +108,22 @@
     max-width: 100%;
     height: auto;
     margin-bottom: 1em;
+  }
+
+  .nav-buttons {
+    margin-top: 1em;
+    display: flex;
+    justify-content: space-between;
+  }
+
+  select {
+    flex-grow: 1;
+    margin: 0 1em;
+  }
+
+  .text-container {
+    text-align: justify;
+    margin: 0 auto;
+    max-width: 80%;
   }
 </style>
