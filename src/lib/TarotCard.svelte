@@ -44,7 +44,7 @@
       {#if tarotCards.length > 0}
         {#each tarotCards as card}
           <div class="tarotCard">
-            <h1>{card.name}</h1>
+            <h2>{card.name}</h2>
             <img src={getCardImage(card.name_short)} alt={card.name} />
             <p>{card.desc}</p>
           </div>
@@ -74,11 +74,6 @@
     margin-bottom: 1em;
   }
 
-  h1 {
-    font-family: 'Cormorant Garamond', serif;
-    font-weight: 400;
-  }
-  @import url('https://fonts.googleapis.com/css2?family=Cormorant+Garamond:ital,wght@0,300;0,400;0,500;0,600;0,700;1,300;1,400;1,500;1,600;1,700&family=Grenze+Gotisch:wght@100..900&display=swap');
   p {
     font-weight: bold;
     margin-bottom: 1em;
@@ -89,6 +84,7 @@
     height: 3em;
     width: 15%;
     border: #000000;
+    text-align: center;
   }
 
   div {
