@@ -27,6 +27,7 @@
   <label>
     Enter the number of cards you wish to draw!
     <br />
+    <br />
     <input type="number" bind:value={numCards} min="1" />
   </label>
 </div>
@@ -43,7 +44,7 @@
       {#if tarotCards.length > 0}
         {#each tarotCards as card}
           <div class="tarotCard">
-            <h2>{card.name}</h2>
+            <h1>{card.name}</h1>
             <img src={getCardImage(card.name_short)} alt={card.name} />
             <p>{card.desc}</p>
           </div>
@@ -59,26 +60,38 @@
 <style>
   .tarotCard {
     display: flex;
-    flex-direction: column; /* Set the flex-direction to column to stack elements vertically */
+    flex-direction: column;
     align-items: center;
-    margin-bottom: 20px;
+    padding: 1em;
+    border: 1px solid #ccc;
+    border-radius: 1em;
+    text-align: justify;
+    margin-bottom: 1em;
   }
 
   img {
-    width: 17em; /* Adjust the width of the image to make it bigger */
-    margin-bottom: 1em; /* Add some margin to separate the image from other details */
+    width: 17em;
+    margin-bottom: 1em;
   }
 
+  h1 {
+    font-family: 'Cormorant Garamond', serif;
+    font-weight: 400;
+  }
+  @import url('https://fonts.googleapis.com/css2?family=Cormorant+Garamond:ital,wght@0,300;0,400;0,500;0,600;0,700;1,300;1,400;1,500;1,600;1,700&family=Grenze+Gotisch:wght@100..900&display=swap');
   p {
-    font-weight: bold; /* Make the name text bold */
-    margin-bottom: 1em; /* Add some margin between the name and the image */
+    font-weight: bold;
+    margin-bottom: 1em;
   }
 
   input {
-    width: 10%;
+    background-color: rgba(0, 0, 0, 0.397);
+    height: 3em;
+    width: 15%;
+    border: #000000;
   }
 
   div {
-    padding: 2em;
+    padding: 1em;
   }
 </style>

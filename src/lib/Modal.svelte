@@ -27,7 +27,7 @@
     width: 40%;
     height: 70%;
     max-height: 80vh;
-    background-color: rgb(29, 28, 28);
+    background-color: rgb(15, 15, 15);
     box-shadow: 0 0 10px rgba(0, 0, 0, 0.3);
     z-index: 100;
     overflow: auto;
