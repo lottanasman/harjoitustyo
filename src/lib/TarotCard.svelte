@@ -12,7 +12,7 @@
     try {
       tarotCards = await fetchTarotCards(numCards);
       showModal = true;
-      numCards = 1;
+      numCards = null;
     } catch (error) {
       error = 'Error fetching tarot cards';
     }
@@ -21,6 +21,8 @@
   function close() {
     showModal = false;
   }
+
+  $: buttonDisabled = numCards !== null && numCards !== 0;
 </script>
 
 <div>
@@ -28,11 +30,11 @@
     Enter the number of cards you wish to draw!
     <br />
     <br />
-    <input type="number" bind:value={numCards} min="1" />
+    <input type="number" bind:value={numCards} placeholder="Enter number" />
   </label>
 </div>
 
-<button on:click={drawCards}>Draw Cards</button>
+<button disabled={!buttonDisabled} on:click={drawCards}>Draw Cards</button>
 
 {#if showModal}
   <Modal>
@@ -82,7 +84,7 @@
   input {
     background-color: rgba(0, 0, 0, 0.397);
     height: 3em;
-    width: 15%;
+    width: 30%;
     border: #000000;
     text-align: center;
   }

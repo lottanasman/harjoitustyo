@@ -2,7 +2,7 @@
   import TarotCard from './lib/TarotCard.svelte';
   import CardList from './lib/CardList.svelte';
 
-  let numCards = 1;
+  let numCards = null;
   let showCardModal = false;
 
   window.addEventListener('sulje', sulje);
