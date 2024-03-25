@@ -2,7 +2,8 @@
   import Modal from './Modal.svelte';
   import { fetchTarot, getCardImage } from './TarotCardFetch';
   import { createEventDispatcher } from 'svelte';
-  import { fade, scale } from 'svelte/transition';
+  import { slide } from 'svelte/transition';
+  import { sineIn } from 'svelte/easing';
 
   export let showCardModal;
 
@@ -53,11 +54,7 @@
 
 {#if showCardModal}
   <Modal>
-    <div
-      class="card"
-      in:scale={{ duration: 500, opacity: 0.5, start: 0.5 }}
-      out:fade
-    >
+    <div class="card">
       <h2>{tarotCards[currentCardIndex].name}</h2>
       <img
         src={getCardImage(tarotCards[currentCardIndex].name_short)}

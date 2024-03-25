@@ -35,11 +35,7 @@
 
 {#if showModal}
   <Modal>
-    <div
-      class="card"
-      in:scale={{ duration: 500, opacity: 0.5, start: 0.5 }}
-      out:fade
-    >
+    <div class="card">
       {#if tarotCards.length > 0}
         {#each tarotCards as card}
           <div class="tarotCard">
