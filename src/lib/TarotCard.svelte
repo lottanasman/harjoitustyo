@@ -26,12 +26,9 @@
 </script>
 
 <div>
-  <label>
-    Enter the number of cards you wish to draw!
-    <br />
-    <br />
-    <input type="number" bind:value={numCards} placeholder="Enter number" />
-  </label>
+  <h4>Enter the number of cards you wish to draw!</h4>
+
+  <input type="number" bind:value={numCards} placeholder="Enter number" />
 </div>
 
 <button disabled={!buttonDisabled} on:click={drawCards}>Draw Cards</button>

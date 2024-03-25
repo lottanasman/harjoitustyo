@@ -124,6 +124,9 @@
   select {
     flex-grow: 1;
     margin: 0 1em;
+    background-color: rgba(0, 0, 0, 0.575);
+    border: #cccccc00;
+    border-radius: 8px;
   }
 
   .text-container {
