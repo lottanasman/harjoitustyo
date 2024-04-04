@@ -1,12 +1,13 @@
 <script>
   import { fetchTarotCards, getCardImage } from './TarotCardFetch';
   import Modal from './Modal.svelte';
-  import { fade, scale } from 'svelte/transition';
+  import { fly } from 'svelte/transition';
 
   export let numCards;
 
   let tarotCards = [];
   let showModal = false;
+  let naytaVaroitus = false;
 
   async function drawCards() {
     try {
@@ -22,7 +23,7 @@
     showModal = false;
   }
 
-  $: buttonDisabled = numCards !== null && numCards !== 0 && numCards !== 11;
+  $: buttonDisabled = numCards !== null && numCards !== 0 && numCards <= 10;
 </script>
 
 <div>
