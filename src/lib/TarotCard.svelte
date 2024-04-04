@@ -26,7 +26,7 @@
 </script>
 
 <div>
-  <h2>Enter the number of cards you wish to draw!</h2>
+  <h3>Enter the number of cards you wish to draw!</h3>
 
   <input type="number" bind:value={numCards} placeholder="Enter number" />
   <p>Psst! You can draw max 10 cards</p>
