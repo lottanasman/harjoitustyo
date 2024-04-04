@@ -22,13 +22,14 @@
     showModal = false;
   }
 
-  $: buttonDisabled = numCards !== null && numCards !== 0;
+  $: buttonDisabled = numCards !== null && numCards !== 0 && numCards !== 11;
 </script>
 
 <div>
-  <h4>Enter the number of cards you wish to draw!</h4>
+  <h2>Enter the number of cards you wish to draw!</h2>
 
   <input type="number" bind:value={numCards} placeholder="Enter number" />
+  <p>Psst! You can draw max 10 cards</p>
 </div>
 
 <button disabled={!buttonDisabled} on:click={drawCards}>Draw Cards</button>
@@ -70,7 +71,6 @@
   }
 
   p {
-    font-weight: bold;
     margin-bottom: 1em;
   }
 

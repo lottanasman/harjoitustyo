@@ -2,8 +2,6 @@
   import Modal from './Modal.svelte';
   import { fetchTarot, getCardImage } from './TarotCardFetch';
   import { createEventDispatcher } from 'svelte';
-  import { slide } from 'svelte/transition';
-  import { sineIn } from 'svelte/easing';
 
   export let showCardModal;
 
