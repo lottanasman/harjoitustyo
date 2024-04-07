@@ -18,4 +18,4 @@ Sovelluksen toiminta perustuu siihen, että käyttäjä voi "nostaa" tietyn mä�
 
 # Ulkoiset materiaalit
 
-Harjoitustyössä käytetty ulkoista datalähdettä tarot korttien tietojen noutamiseen. [Linkki APIiin] (https://github.com/ekelen/tarot-api)
+Harjoitustyössä käytetty ulkoista datalähdettä tarot korttien tietojen noutamiseen. Linkki APIiin: https://github.com/ekelen/tarot-api
