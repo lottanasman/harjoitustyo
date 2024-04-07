@@ -18,4 +18,4 @@ Sovelluksen toiminta perustuu siihen, että käyttäjä voi "nostaa" tietyn mä�
 
 # Ulkoiset materiaalit
 
-Harjoitustyössä käytetty ulkoista datalähdettä tarot korttien tietojen noutamiseen. Tässä linkki kyseisen API:n git repoon: ekelen/tarot-api: Simple REST API for the tarot cards of the Rider-Waite-Smith deck (github.com)
+Harjoitustyössä käytetty ulkoista datalähdettä tarot korttien tietojen noutamiseen. [Linkki APIiin] (https://github.com/ekelen/tarot-api)
