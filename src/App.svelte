@@ -19,7 +19,7 @@
 </script>
 
 <main>
-  <h1>Tarot Card Reader</h1>
+  <h1>Tarot Reader</h1>
 
   <TarotCard {numCards} />
 
