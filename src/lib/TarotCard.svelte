@@ -23,7 +23,7 @@
     showModal = false;
   }
 
-  $: buttonDisabled = numCards !== null && numCards !== 0 && numCards <= 10;
+  $: buttonDisabled = numCards !== null && numCards > 0 && numCards <= 10;
 </script>
 
 <div>
