@@ -39,6 +39,8 @@
     );
   }
 
+  //Yllä oleva funktio tekoälyä! Alla olevassa käytetty hyödyksi samaa koodin pätkää osittain!
+
   $: {
     if (selectedCardName !== '') {
       currentCardIndex = tarotCards.findIndex(
@@ -54,6 +56,8 @@
   <Modal>
     <div class="card">
       <h2>{tarotCards[currentCardIndex].name}</h2>
+
+      <!-- Alla tekoälyn sisältämää koodia -->
       <img
         src={getCardImage(tarotCards[currentCardIndex].name_short)}
         alt={tarotCards[currentCardIndex].name}
