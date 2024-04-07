@@ -19,3 +19,11 @@ Sovelluksen toiminta perustuu siihen, että käyttäjä voi "nostaa" tietyn mä�
 # Ulkoiset materiaalit
 
 Harjoitustyössä käytetty ulkoista datalähdettä tarot korttien tietojen noutamiseen. Linkki APIiin: https://github.com/ekelen/tarot-api
+
+Tarot korttipakan kuvat on ladattu Wikimediasta. Kyseessä Rider Waite 1909 korttipakka, joka on public domainia: https://en.wikipedia.org/wiki/Rider%E2%80%93Waite_Tarot
+
+Taustakuva ladattu Pexels sivustolta ja svg on ladattu täältä: https://www.svgrepo.com/svg/474458/star-track
+
+# Tekoäly
+
+Tässä harjoitustyössä on käytetty tekoälyä. Olen mahdollisimman selkeästi merkannut kohdat joissa on tekoälyn tekemää koodia. Mikään tekoälyn luoma koodi ei ole ns. tuulesta temmattu, minulla on yleensä ollut jokin oma koodi jota olen pyytänyt tekoölyä muokkaamaan. Käytin ChatGPT:tä. Kaikki, missä ei toisin lue, on omaa koodia. Olen ottanut mallia kurssin aiemmista tehtävistä ja kurssimateriaaleista. 
